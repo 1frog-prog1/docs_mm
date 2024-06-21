@@ -1,0 +1,86 @@
+\pagebreak
+
+\section{Анализ модели}
+	Найдем точки покоя математической модели:
+	\begin{equation*}
+		\begin{cases}
+			\dfrac{dx}{dt} = (a - cy)x = 0, \\
+			\dfrac{dy}{dt} = (dx - b)y = 0.
+		\end{cases}
+	\end{equation*}
+
+	Корнями будут:
+	\begin{equation}
+		\begin{cases}
+			x_0 = 0,\\
+			y_0 = 0;\\
+		\end{cases} 
+		\quad \text{и} \quad
+		\begin{cases}
+			x_1 = \dfrac{b}{d},\\
+			y_1 = \dfrac{a}{c};\\
+		\end{cases}
+	\end{equation}
+		 
+
+	Применим метод первого приближения для анализа устойчивости найденных точек покоя. Для этого построим матрицу Якоби и вычислим её собственные значения.
+
+	Матрица Якоби математической модели:
+	\begin{equation*}
+		J = \begin{pmatrix}
+			a - c \cdot y & -c \cdot x \\
+			d \cdot y 	  & -b + d \cdot x
+		\end{pmatrix}
+	\end{equation*}
+
+	Подставим найденные точки покоя в матрицу Якоби. 
+
+	Для точки \( (x_0, y_0) \):
+	\begin{equation*}
+		J|_{(x_0, y_0)}  = J_0 = 
+		\begin{pmatrix}
+			 a & 0 \\
+			 0 & -b
+		\end{pmatrix} 
+		\rightarrow 
+		\det (J_0 - \lambda I ) = 
+		\begin{vmatrix}
+			 a - \lambda & 0 \\
+			 0 & -b - \lambda
+		\end{vmatrix} .
+	\end{equation*}
+
+	Отсюда собственные значения \( J_0 \):
+	\begin{equation*}
+		\lambda_1 = a > 0, \quad \lambda_2 = -b < 0.
+	\end{equation*}
+
+	Нулевая точка является седловой точкой. Это означает, что рядом с ней функция ведет себя следующим образом: 
+	% Вставить график поведения функции рядом с седловой точкой
+	\graphic{pics/building_graphics/sedlo.png}{Поведение функции рядом с седловой точкой}{9}
+
+	Для точки \( (x_1, y_1) \):
+	\begin{equation*}
+		J|_{(x_1, y_1)}  = J_1 = 
+		\begin{pmatrix}
+			 0 & -c \cdot \dfrac{b}{d} \\
+			 d \cdot \dfrac{a}{c} & 0
+		\end{pmatrix} 
+		\rightarrow 
+		\det (J_1 - \lambda I ) = 
+		\begin{vmatrix}
+			 - \lambda & -c \cdot \dfrac{b}{d} \\
+			 d \cdot \dfrac{a}{c} & - \lambda
+		\end{vmatrix} .
+	\end{equation*}
+
+	Отсюда собственные значения для \( J_1 \):
+	\begin{equation*}
+		\lambda_{1, 2} = \pm i \cdot \sqrt{a b}
+	\end{equation*}
+
+	Поскольку \( \lambda_{1, 2} \) состоят только из мнимой части точка \( (x_1, y_1) = \left(\frac{b}{d}, \frac{a}{c} \right) \) является асимптотически неуйсточивой, а именно центром. Это означает, что в самой точке не будет происходить изменения, но на на некотором удалении от неё  движение будет циклично.
+
+	\graphic{pics/building_graphics/center.png}{Поведение функции рядом с центром}{9}
+
+\pagebreak

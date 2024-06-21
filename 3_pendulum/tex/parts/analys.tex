@@ -1,0 +1,69 @@
+\pagebreak
+
+\section{Анализ модели}
+	Проведём анализ линейной модели математического маятника, так как с помощью неё можно сделать вывод о поведении решений и нелинейных моделей при небольших колебаниях.
+
+	\subsection{Анализ модели без учёта внешних сил}
+		\begin{equation*}
+			\begin{cases}
+				& \dfrac{d^2 \alpha}{dt^2} + w^2  \alpha = 0, \\
+				& \alpha(0) = \alpha_0, \\
+				& \alpha'(0) = \alpha_1.
+			\end{cases}
+		\end{equation*}
+
+		Для такой системы можно заранее найти аналитическое решение:
+		\begin{equation*}
+			\alpha(t) = \alpha_0 \cos(wt) + \dfrac{\alpha_1}{w} \sin(wt)
+		\end{equation*}
+		Однако запись можно упростить. Существуют такой угол \( \beta \) и такая константа \( \rho \), что:
+		\begin{equation*}
+			\sin \beta = \rho \cdot \alpha_0, \quad 
+			\cos \beta = \rho \cdot \dfrac{\alpha_1}{w},
+		\end{equation*}
+		что точное решение можно сложить по формуле синуса суммы в:
+		\begin{equation*}
+			\alpha(t) = \rho \sin(wt + \beta).
+		\end{equation*}
+		То есть, решение модели без учёта внешних сил принимает вид синусоиды.
+
+	\subsection{Анализ модели с учётом трения}
+		\begin{equation*}
+			\begin{cases}
+				& \dfrac{d^2 \alpha}{dt^2} + k \dfrac{d \alpha}{dt} + w^2  \alpha = 0, \\
+				& \alpha(0) = \alpha_0, \\
+				& \alpha'(0) = \alpha_1.
+			\end{cases}
+		\end{equation*}
+
+		Аналитическое решение для такого дифференцильного уравнения:
+		\begin{equation*}
+			\alpha(t) = C_1 e^{-\frac{1}{2} t \left(\sqrt{k^2 - 4 w^2} + k \right)} + C_2 e^{\frac{1}{2} t \left(\sqrt{k^2 - 4 w^2} - k \right)}
+		\end{equation*}
+
+		Слагаемые представляют из себя показательные функции. Первое слагаемое имеет отрицательную степень \( -\frac{1}{2} \left(\sqrt{k^2 - 4 w^2} + k \right) \) за счёт знака.
+		Во втором слагаемом степень также меньше нуля \( \sqrt{k^2 - 4 w^2} - k  < 0 \) при любых \( k, w > 0 \), потому тоже является убывающей функцией.
+
+		Таким образом, так как оба слагаемых представляют из себя показательные функции с отрицательными степенями: 
+		\begin{align*}
+			& \lim_{t \rightarrow \infty} C_1 e^{-\frac{1}{2} t \left(\sqrt{k^2 - 4 w^2} + k \right)} \rightarrow 0, \\
+			& \lim_{t \rightarrow \infty} C_1 e^{\frac{1}{2} t \left(\sqrt{k^2 - 4 w^2} - k \right)} \rightarrow 0,
+		\end{align*}
+		то и их сумма, \( \displaystyle \lim_{t \rightarrow \infty} \alpha(t) \rightarrow  0.\) 
+
+		То есть со временем из-за силы трения со временем колебания будут затухать и в один момент маятник достигнет покоя.
+
+	\subsection{Анализ модели с вынужденными колебаниями}
+		\begin{equation}
+			\begin{cases}
+				& \dfrac{d^2 \alpha}{dt^2} + w^2  \alpha = A \cdot \cos(wt), \\
+				& \alpha(0) = \alpha_0, \\
+				& \alpha'(0) = \alpha_1.
+			\end{cases}
+		\end{equation}
+
+		Аналитическое решение: \( C_1 \cos \left( wt \right) + C_2 \sin \left( wt \right) + \dfrac{k \cos \left( w_f t \right)}{w^2 - w_f^2}  \).
+
+		При \( w_f \neq w \) все слагаемые -- ограниченные сверху и снизу функции, потому и решение \( \alpha(t) \) тоже будет ограниченной функцией. Но при \( w_f = w \) в знаменателе получается ноль. Потому точное решение, нелинейной модели, скорее всего, при таком параметре \( w_f \) будет иметь непредсказуемо поведение.
+
+\pagebreak

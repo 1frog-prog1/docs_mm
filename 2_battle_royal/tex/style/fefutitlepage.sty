@@ -1,0 +1,166 @@
+\RequirePackage{polyglossia}
+\RequirePackage{amsmath}
+\RequirePackage{geometry}
+\RequirePackage{fontspec}
+\RequirePackage{graphicx}
+\RequirePackage{array}
+\RequirePackage{datetime}
+\RequirePackage[russian]{datetime2}
+\RequirePackage{datetime2-calc}
+\RequirePackage{float}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{xecyr}
+
+\setmainlanguage{russian}
+\setmainfont{Times New Roman}
+\newfontfamily{\cyrillicfont}{Times New Roman}
+\SetLanguageKeys{russian}{indentfirst=true}
+
+\DTMlangsetup*{mapzone}
+
+\parindent 1.25cm
+\linespread{1.5}
+
+\geometry{left=2.5cm}
+\geometry{right=1.5cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+\makeatletter
+\newcommand*\short[1]{\expandafter\@gobbletwo\number\numexpr#1\relax}
+\makeatother
+
+\newcommand{\uline}[1]{\underline{#1\vphantom{lp}}}
+
+\newcommand{\editspace}[2]{
+	\(
+		\underset{\text{\textit{#2}}}{\uline{\text{#1}}}
+	\)
+}
+
+\newcommand{\usign}{\editspace{\hspace{80pt}}{(подпись)}}
+\newcommand{\ufullname}[1]{\editspace{ #1 }{(Ф.И.О.)}}
+\newcommand{\docdate}[3]{
+	<<\uline{\,#1\,}>> \uline{\,#2\,} 20\uline{\,#3\,} г.
+}
+\newcommand{\filldate}{
+	\docdate{\hspace{20pt}}{\hspace{80pt}}{\hspace{15pt}}
+}
+\newdateformat{docdateformat}{
+	\docdate{\twodigit{\THEDAY}}{\DTMrussianmonthname{\THEMONTH}}{\short{\THEYEAR}}
+}
+ 
+\newcommand{\FEFUDOCUMENTCLASS}{ОТЧЕТ}
+\newcommand{\fefudocumentclass}[1]{
+	\renewcommand{\FEFUDOCUMENTCLASS}{#1}
+}
+
+\newcommand{\FEFUTITLE}{по лабораторной работе}
+\newcommand{\fefutitle}[1]{
+	\renewcommand{\FEFUTITLE}{#1}
+}
+
+\newcommand{\FEFUMAJOR}{01.03.02 <<Прикладная математика и информатика>>}
+\newcommand{\fefumajor}[1]{
+	\renewcommand{\FEFUMAJOR}{#1}
+}
+
+\newcommand{\FEFUGROUP}{Б9121-01.03.02сп(1)}
+\newcommand{\fefugroup}[1]{
+	\renewcommand{\FEFUGROUP}{#1}
+}
+
+\newcommand{\FEFUAUTHOR}{Кикоть М.Е.}
+\newcommand{\fefuauthor}[1]{
+	\renewcommand{\FEFUAUTHOR}{#1}
+}
+
+% Date
+
+\newcommand{\FEFUDAY}{\the\day}
+\newcommand{\fefuday}[1]{
+	\renewcommand{\FEFUDAY}{#1}
+}
+
+\newcommand{\FEFUMONTH}{\the\month}
+\newcommand{\fefumonth}[1]{
+	\renewcommand{\FEFUMONTH}{#1}
+}
+
+\newcommand{\FEFUYEAR}{\the\year}
+\newcommand{\fefuyear}[1]{
+	\renewcommand{\FEFUYEAR}{#1}
+}
+
+\newdate{fefudate}{\FEFUDAY}{\FEFUMONTH}{\FEFUYEAR}
+
+\newcommand{\fefutitlepage}{
+	\begin{center}
+		\includegraphics[scale=0.3]{pics/fefu_logo.pdf}
+
+		\vspace*{-10pt}
+		{\fontsize{11}{11}\selectfont МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ}
+		
+		\vspace*{-12pt}
+		{\fontsize{11}{11}\selectfont Федеральное госудраственное автономное образовательное учреждение высшего образования}
+		
+		\vspace*{-10pt}
+		\textbf{<<Дальневосточный федеральный университет>>}
+
+		\vspace*{-10pt}
+		(ДВФУ)
+
+		\vspace*{-10pt}
+		\rule{\textwidth}{3pt}
+
+		\vspace*{-24pt}
+		\rule{\textwidth}{1pt}
+
+		\vspace{10pt}
+		\textbf{ИНСТИТУТ МАТЕМАТИКИ И КОМПЬЮТЕРНЫХ ТЕХНОЛОГИЙ}
+
+		\textbf{(ШКОЛА)}
+
+		\vspace{10pt}
+		\textbf{Депортамент математического и компьютерного моделирования}
+
+		\vspace{20pt}
+		\textbf{\FEFUDOCUMENTCLASS}
+
+		\vspace{15pt}
+		\FEFUTITLE
+
+		\vspace{10pt}
+		Направление подготовки
+
+		\vspace*{-6pt}
+		\FEFUMAJOR
+
+	\end{center}
+
+	\begin{tabular}{p{0.5\textwidth} p{0.5\textwidth}}	
+		&Выполнил студент гр.
+
+		\FEFUGROUP
+
+		\ufullname{\FEFUAUTHOR} \usign
+
+		\vspace{10pt}
+		\docdateformat\displaydate{fefudate}
+
+	\end{tabular}
+
+	\vfill
+
+	\begin{center}
+		\textbf{г. Владивосток}
+
+		\textbf{2023}
+
+	\end{center}
+
+	\thispagestyle{empty}
+
+	\pagebreak
+
+}

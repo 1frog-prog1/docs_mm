@@ -1,0 +1,21 @@
+\selectlanguage *{russian}
+\contentsline {section}{\numberline {1}Введение}{3}{section.1}%
+\contentsline {section}{\numberline {2}Построение модели}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Нелинейная математическая модель без учёта внешних сил}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Линейная математическая модель без учёта внешних сил}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Математическая модель с учётом трения}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Математическая модель с вынужденными колебаниями}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Анализ модели}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Анализ модели без учёта внешних сил}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Анализ модели с учётом трения}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Анализ модели с вынужденными колебаниями}{8}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Численные эксперименты}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Метод решения}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Программа}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Результаты}{9}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Модель без учёта внешних сил}{9}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Модель с учётом трения}{11}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Модель с учётом гармонических колебаний}{12}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Модель с учётом гармонических колебаний и трения}{13}{subsubsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.4}Резонанс}{16}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Заключение}{18}{section.5}%
