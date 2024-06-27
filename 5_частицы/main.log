@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.6.26)  27 JUN 2024 13:46
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2024.4.27)  22 JUN 2024 02:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -586,14 +586,8 @@ braces):
 >  {russian/babelname}  =>  {russian}
 >  {russian/localnumeral}  =>  {russiannumerals}
 >  {russian/Localnumeral}  =>  {Russiannumerals}.
-
-
-Package polyglossia Warning: No hyphenation patterns were loaded for `russian'
-(polyglossia)                I will use \language=\l@nohyphenation instead on i
-nput line 17.
-
-\l@russian = a dialect from \language\l@nohyphenation 
 Package polyglossia Info: Option: Russian, numerals=arabic.
+
 (/usr/share/texlive/texmf-dist/tex/latex/polyglossia/babelsh.def
 File: babelsh.def 2019/09/30 Babel common definitions for shorthands
  Taken verbatim from babel files (2019/09/27 v3.34)
@@ -900,158 +894,14 @@ LaTeX Info: Redefining \ttfamily on input line 1.
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- (./parts/introduction.tex [2]
-Overfull \hbox (0.87589pt too wide) in paragraph at lines 4--5
-\TU/TimesNewRoman(1)/m/n/14.4 системами, в которых выполняются законы Ньютона. 
-Системы отсчета, которые
+ (./parts/introduction.tex [2]) [3] (./parts/construction.tex) [4] (./parts/ana
+lys.tex) (./parts/building.tex
+Overfull \hbox (2.11975pt too wide) in paragraph at lines 4--5
+[]\TU/TimesNewRoman(1)/m/n/14.4 Для решения уравнений в частных производных чис
+ленно применяют раз-
  []
 
-
-Overfull \hbox (77.78702pt too wide) in paragraph at lines 4--5
-\TU/TimesNewRoman(1)/m/n/14.4 движутся относительно инерциальных систем с ускор
-ением, называются неинерциальными.
- []
-
-
-Overfull \hbox (27.99767pt too wide) in paragraph at lines 6--7
-\TU/TimesNewRoman(1)/m/n/14.4 подвергается центробежным силам. Центробежные сил
-ы возникают из-за ускорения
- []
-
-
-Overfull \hbox (0.976pt too wide) in paragraph at lines 8--9
-[]\TU/TimesNewRoman(1)/m/n/14.4 Понимание этого явления позволяет углубить знан
-ия о физике и механике,
- []
-
-) [3] (./parts/construction.tex
-Overfull \hbox (6.63425pt too wide) in paragraph at lines 6--7
-[]\TU/TimesNewRoman(1)/m/n/14.4 рассматриваем движение тела относительно вращаю
-щейся системы отчета
- []
-
-
-Overfull \hbox (3.10689pt too wide) in paragraph at lines 28--29
-[]\TU/TimesNewRoman(1)/m/n/14.4 Сократив уравнение на $\OML/cmm/m/it/14.4 m$ \T
-U/TimesNewRoman(1)/m/n/14.4 и рассматривая изменение положения по каждой
- []
-
-
-Overfull \hbox (18.88504pt too wide) in paragraph at lines 28--29
-\TU/TimesNewRoman(1)/m/n/14.4 компоненте, получаем систему линейных дифферециал
-ьных уравнений II порядка: 
- []
-
-
-Overfull \hbox (38.14671pt too wide) in paragraph at lines 36--37
-[]\TU/TimesNewRoman(1)/m/n/14.4 Добавим начальные условия и получим математичес
-кую модель, описывающую
- []
-
-[4]) [5] (./parts/analys.tex
-Overfull \hbox (11.87267pt too wide) in paragraph at lines 23--24
-\TU/TimesNewRoman(1)/m/n/14.4 быть, так как наша система замкнутая, потому и за
-кон сохранения энергии должен
- []
-
-
-Overfull \hbox (14.04126pt too wide) in paragraph at lines 25--26
-[]\TU/TimesNewRoman(1)/m/n/14.4 Отсюда же можно сделать вывод, что траектории д
-вижения будут принимать
- []
-
-! Double superscript.
-l.30 ^^I^^Idx^2 + dy^2 - x'_0^
-                              2 - y'_0^2 = 0.
-I treat `x^1^2' essentially like `x^1{}^2'.
-
-! Double superscript.
-l.30 ^^I^^Idx^2 + dy^2 - x'_0^2 - y'_0^
-                                       2 = 0.
-I treat `x^1^2' essentially like `x^1{}^2'.
-
-) [6] (./parts/building.tex
-Overfull \hbox (14.42458pt too wide) in paragraph at lines 6--7
-[]\TU/TimesNewRoman(1)/m/n/14.4 Для вычисления решения был использован метод Ру
-нге-Кутта. Он позволяет
- []
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 8.
-
-(./src/runge_kutta.py)
-Overfull \hbox (31.6406pt too wide) in paragraph at lines 11--12
-[]\TU/TimesNewRoman(1)/m/n/14.4 Рассмотрим траектории, начинающиеся из точки $\
-OT1/cmr/m/n/14.4 (8\OML/cmm/m/it/14.4 ; \OT1/cmr/m/n/14.4 4)$ \TU/TimesNewRoman
-(1)/m/n/14.4 c разными имеющимися
- []
-
-File: pics/building_graphics/10.png Graphic file (type bmp)
-<pics/building_graphics/10.png>
-
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 13--13
- [][] 
- []
-
-[7]
-Overfull \hbox (4.68929pt too wide) in paragraph at lines 17--18
-\TU/TimesNewRoman(1)/m/n/14.4 погрешностью численного метода. Так как при умень
-шении шага $\OML/cmm/m/it/14.4 h$ \TU/TimesNewRoman(1)/m/n/14.4 уменьшается
- []
-
-
-Overfull \hbox (23.95013pt too wide) in paragraph at lines 19--21
-[]\TU/TimesNewRoman(1)/m/n/14.4 Рассмотрим влияние угловой скорости $\OML/cmm/m
-/it/14.4 w$ \TU/TimesNewRoman(1)/m/n/14.4 на траектории движения. В прошлом
- []
-
-File: pics/building_graphics/100.png Graphic file (type bmp)
-<pics/building_graphics/100.png>
-
-Overfull \hbox (28.45273pt too wide) in paragraph at lines 22--22
- [][] 
- []
-
-[8]) [9] (./parts/conclusion.tex
-Overfull \hbox (2.65881pt too wide) in paragraph at lines 4--5
-[]\TU/TimesNewRoman(1)/m/n/14.4 Была построена математическая модель во вращающ
-ейся система отсчета.
- []
-
-
-Overfull \hbox (9.24873pt too wide) in paragraph at lines 4--5
-\TU/TimesNewRoman(1)/m/n/14.4 Она представляла из себя систему двух дифференциа
-льных уравнения II порядка.
- []
-
-
-Overfull \hbox (7.00111pt too wide) in paragraph at lines 4--5
-\TU/TimesNewRoman(1)/m/n/14.4 При анализе было выявлено, что траектории движени
-я выглядят как окружности.
- []
-
-
-Overfull \hbox (17.13666pt too wide) in paragraph at lines 4--5
-\TU/TimesNewRoman(1)/m/n/14.4 И чем больше по модулю начальные скорости тела, т
-ем больше радиус окружности
- []
-
-
-Overfull \hbox (42.84068pt too wide) in paragraph at lines 4--5
-\TU/TimesNewRoman(1)/m/n/14.4 движения. Были построены численные решения из одн
-ой точки с разными начальными
- []
-
-
-Overfull \hbox (7.53668pt too wide) in paragraph at lines 4--5
-\TU/TimesNewRoman(1)/m/n/14.4 скоростями, чтоб подтвердить эту гипотезу, а такж
-е увидеть зависимость радиуса
- []
-
-) [10]
+) [5] (./parts/conclusion.tex)
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -1092,15 +942,15 @@ LaTeX Info: Redefining \sffamily on input line 20.
 LaTeX Info: Redefining \ttfamily on input line 20.
 )
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 97986B44886361EE0917F1BC93387311;1169.
+(rerunfilecheck)             Checksum: BC2B907140817032BCE12F1F573B92DB;465.
  ) 
 Here is how much of TeX's memory you used:
- 23432 strings out of 478190
- 458407 string characters out of 5854827
- 1006788 words of memory out of 5000000
- 43628 multiletter control sequences out of 15000+600000
- 471303 words of font info for 74 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 102i,17n,105p,1047b,1435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 23185 strings out of 476191
+ 455039 string characters out of 5812072
+ 801407 words of memory out of 5000000
+ 43533 multiletter control sequences out of 15000+600000
+ 471263 words of font info for 69 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 102i,17n,105p,1047b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (10 pages).
+Output written on main.xdv (5 pages, 24724 bytes).
